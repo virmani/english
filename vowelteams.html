@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Teams Spelling Adventure! 🌟</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1 class="app-title">🌟 Vowel Teams Adventure! 🌟</h1>
+            <div class="score-display">
+                <span class="score-label">Score: </span>
+                <span id="score">0</span>
+                <div class="stars" id="stars"></div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Main Menu Section -->
+            <section id="concept-section" class="section active">
+                <div class="concept-card">
+                    <h2 class="section-title">🌟 Vowel Teams Adventure! 🌟</h2>
+                    <div class="concept-content">
+                        
+                        <div class="level-selection">
+                            <h3 class="level-title">🎯 Choose Your Level!</h3>
+                            <div class="level-buttons">
+                                <button id="easy-level" class="level-btn active">
+                                    <span class="level-icon">🌟</span>
+                                    <span class="level-name">Level 1: Easy</span>
+                                    <span class="level-desc">Short, simple words</span>
+                                </button>
+                                <button id="hard-level" class="level-btn">
+                                    <span class="level-icon">🚀</span>
+                                    <span class="level-name">Level 2: Challenge</span>
+                                    <span class="level-desc">Longer, complex words</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="activity-selection">
+                            <h3 class="activity-title">🎮 Choose Your Activity!</h3>
+                            <div class="activity-buttons">
+                                <button id="spelling-activity" class="activity-btn">
+                                    📝 Spelling Practice
+                                </button>
+                                <button id="fill-blank-activity" class="activity-btn">
+                                    🧩 Fill the Blanks
+                                </button>
+                                <button id="sound-match-activity" class="activity-btn">
+                                    🎵 Sound Match
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="review-section">
+                            <h3 class="review-title">📚 Review Vowel Teams</h3>
+                            <button id="review-concepts" class="review-btn">
+                                🤝 Learn About Vowel Teams
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vowel Teams Review Section -->
+            <section id="review-section" class="section">
+                <div class="concept-card">
+                    <h2 class="section-title">🤝 What Are Vowel Teams?</h2>
+                    <div class="concept-content">
+                        <p class="concept-text">
+                            Vowel teams are when two vowels work together to make one sound! 
+                            They're like best friends helping each other! 👫
+                        </p>
+                        
+                        <div class="vowel-teams-by-sound">
+                            <!-- Long A Sound Group -->
+                            <div class="sound-group" data-sound="/ā/">
+                                <h4 class="sound-title">Long A Sound /ā/ <span class="sound-example">(like "cake")</span></h4>
+                                <div class="vowel-teams-row">
+                                    <div class="vowel-team-card" data-sound="ai">
+                                        <span class="team">ai</span>
+                                        <span class="example">rain, train</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="ay">
+                                        <span class="team">ay</span>
+                                        <span class="example">play, day</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Long E Sound Group -->
+                            <div class="sound-group" data-sound="/ē/">
+                                <h4 class="sound-title">Long E Sound /ē/ <span class="sound-example">(like "bee")</span></h4>
+                                <div class="vowel-teams-row">
+                                    <div class="vowel-team-card" data-sound="ee">
+                                        <span class="team">ee</span>
+                                        <span class="example">tree, green</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="ea">
+                                        <span class="team">ea</span>
+                                        <span class="example">beach, read</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="ey">
+                                        <span class="team">ey</span>
+                                        <span class="example">key, honey</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- OI Sound Group -->
+                            <div class="sound-group" data-sound="/oi/">
+                                <h4 class="sound-title">OI Sound /oi/ <span class="sound-example">(like "boy")</span></h4>
+                                <div class="vowel-teams-row">
+                                    <div class="vowel-team-card" data-sound="oi">
+                                        <span class="team">oi</span>
+                                        <span class="example">coin, boil</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="oy">
+                                        <span class="team">oy</span>
+                                        <span class="example">toy, boy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Long O Sound Group -->
+                            <div class="sound-group" data-sound="/ō/">
+                                <h4 class="sound-title">Long O Sound /ō/ <span class="sound-example">(like "boat")</span></h4>
+                                <div class="vowel-teams-row">
+                                    <div class="vowel-team-card" data-sound="oa">
+                                        <span class="team">oa</span>
+                                        <span class="example">boat, coat</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="oe">
+                                        <span class="team">oe</span>
+                                        <span class="example">toe, hoe</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="ow">
+                                        <span class="team">ow</span>
+                                        <span class="example">snow, show</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="o_e">
+                                        <span class="team">o_e</span>
+                                        <span class="example">home, phone</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- OU/OW Sound Group -->
+                            <div class="sound-group" data-sound="/ow/">
+                                <h4 class="sound-title">OW Sound /ow/ <span class="sound-example">(like "cow")</span></h4>
+                                <div class="vowel-teams-row">
+                                    <div class="vowel-team-card" data-sound="ou">
+                                        <span class="team">ou</span>
+                                        <span class="example">mouse, house</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="ow-cow">
+                                        <span class="team">ow</span>
+                                        <span class="example">cow, how</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Long U Sound Group -->
+                            <div class="sound-group" data-sound="/ū/">
+                                <h4 class="sound-title">Long U Sound /ū/ <span class="sound-example">(like "moon")</span></h4>
+                                <div class="vowel-teams-row">
+                                    <div class="vowel-team-card" data-sound="oo">
+                                        <span class="team">oo</span>
+                                        <span class="example">moon, room</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="ue">
+                                        <span class="team">ue</span>
+                                        <span class="example">blue, glue</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="ew">
+                                        <span class="team">ew</span>
+                                        <span class="example">new, flew</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- AW Sound Group -->
+                            <div class="sound-group" data-sound="/aw/">
+                                <h4 class="sound-title">AW Sound /aw/ <span class="sound-example">(like "claw")</span></h4>
+                                <div class="vowel-teams-row">
+                                    <div class="vowel-team-card" data-sound="au">
+                                        <span class="team">au</span>
+                                        <span class="example">pause, cause</span>
+                                    </div>
+                                    <div class="vowel-team-card" data-sound="aw">
+                                        <span class="team">aw</span>
+                                        <span class="example">claw, draw</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Special Sounds -->
+                            <div class="sound-group" data-sound="/shun/">
+                                <h4 class="sound-title">SHUN Sound /shun/ <span class="sound-example">(like "action")</span></h4>
+                                <div class="vowel-teams-row">
+                                    <div class="vowel-team-card" data-sound="ion">
+                                        <span class="team">ion</span>
+                                        <span class="example">action, nation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button id="back-to-menu" class="back-btn">← Back to Menu</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Spelling Practice Section -->
+            <section id="spelling-section" class="section">
+                <div class="practice-card">
+                    <h2 class="section-title">📝 Spelling Practice</h2>
+                    
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="spelling-progress-fill"></div>
+                        <span class="progress-text"><span id="spelling-current-question">1</span> of <span id="spelling-total-questions">10</span></span>
+                    </div>
+                    
+                    <div class="question-area">
+                        <div class="word-display">
+                            <h3 class="instruction">Listen and spell this word:</h3>
+                            <button id="play-word" class="play-btn">🔊 Play Word</button>
+                            <div class="word-hint" id="word-hint"></div>
+                        </div>
+                        
+                        <div class="spelling-input">
+                            <input type="text" id="user-input" placeholder="Type the word here..." autocomplete="off" spellcheck="false">
+                            <button id="check-answer" class="check-btn">Check!</button>
+                        </div>
+                        
+                        <div class="feedback" id="feedback"></div>
+                    </div>
+                    
+                    <button id="back-to-activities" class="back-btn">← Back to Activities</button>
+                </div>
+            </section>
+
+            <!-- Fill the Blanks Section -->
+            <section id="fill-blank-section" class="section">
+                <div class="practice-card">
+                    <h2 class="section-title">🧩 Fill the Blanks</h2>
+                    
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="blank-progress-fill"></div>
+                        <span class="progress-text"><span id="blank-current-question">1</span> of <span id="blank-total-questions">10</span></span>
+                    </div>
+                    
+                    <div class="question-area">
+                        <div class="word-display">
+                            <h3 class="instruction" id="blank-instruction">Choose the right vowel team:</h3>
+                            <div class="blank-word" id="blank-word"></div>
+                            <div class="word-hint" id="blank-hint"></div>
+                        </div>
+                        
+                        <div class="selection-progress" id="selection-progress" style="display: none;">
+                            <div class="progress-dots">
+                                <!-- Dots will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="multiple-choice" id="multiple-choice">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="selected-answers" id="selected-answers" style="display: none;">
+                            <!-- Selected answers will be shown here -->
+                        </div>
+                        
+                        <div class="feedback" id="blank-feedback"></div>
+                    </div>
+                    
+                    <button id="back-to-activities-2" class="back-btn">← Back to Activities</button>
+                </div>
+            </section>
+
+            <!-- Sound Match Section -->
+            <section id="sound-match-section" class="section">
+                <div class="practice-card">
+                    <h2 class="section-title">🎵 Sound Match</h2>
+                    
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="sound-progress-fill"></div>
+                        <span class="progress-text"><span id="sound-current-question">1</span> of <span id="sound-total-questions">10</span></span>
+                    </div>
+                    
+                    <div class="question-area">
+                        <div class="word-display">
+                            <h3 class="instruction">Which vowel team makes this sound?</h3>
+                            <button id="play-sound" class="play-btn">🔊 Play Sound</button>
+                            <div class="sound-display" id="sound-display"></div>
+                        </div>
+                        
+                        <div class="vowel-team-options" id="vowel-team-options">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                        
+                        <div class="feedback" id="sound-feedback"></div>
+                    </div>
+                    
+                    <button id="back-to-activities-3" class="back-btn">← Back to Activities</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="section">
+                <div class="results-card">
+                    <h2 class="section-title">🎉 Great Job! 🎉</h2>
+                    <div class="final-score">
+                        <div class="score-circle">
+                            <span id="final-score">0</span>
+                            <span class="score-total">/ 10</span>
+                        </div>
+                        <div id="performance-message"></div>
+                    </div>
+                    
+                    <div class="results-actions">
+                        <button id="try-again" class="action-btn">Try Again! 🔄</button>
+                        <button id="back-to-concept" class="action-btn secondary">Review Concepts 📚</button>
+                        <button id="try-different-activity" class="action-btn">Try Different Activity 🎯</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Celebration Elements -->
+        <div id="celebration" class="celebration">
+            <div class="confetti"></div>
+            <div class="celebration-message" id="celebration-message"></div>
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-star">⭐</div>
+            <div class="floating-star">✨</div>
+            <div class="floating-star">🌟</div>
+            <div class="floating-heart">💖</div>
+            <div class="floating-heart">💜</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
