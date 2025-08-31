@@ -1,0 +1,182 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* App Container */
+.app-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Header */
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.app-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: titleBounce 2s ease-in-out infinite;
+}
+
+@keyframes titleBounce {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.score-display {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    padding: 10px 20px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.score-label {
+    font-weight: 600;
+    color: #333;
+}
+
+#score {
+    font-weight: 700;
+    color: #667eea;
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
+
+.stars {
+    display: inline-block;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+@keyframes starPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Main Content */
+.main-content {
+    position: relative;
+    z-index: 5;
+}
+
+/* Section Management */
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards */
+.concept-card, .practice-card, .results-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.concept-card:hover, .practice-card:hover, .results-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2rem;
+    color: #667eea;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.back-btn {
+    background: linear-gradient(135deg, #a8a8a8, #888888);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.back-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-star, .floating-heart {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: float 8s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+.floating-star:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.floating-star:nth-child(2) { top: 20%; right: 15%; animation-delay: 2s; }
+.floating-star:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 4s; }
+.floating-heart:nth-child(4) { top: 60%; right: 10%; animation-delay: 1s; }
+.floating-heart:nth-child(5) { bottom: 15%; right: 25%; animation-delay: 3s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}

@@ -1,0 +1,389 @@
+/* Mobile and Responsive Design */
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 15px;
+    }
+    
+    .app-title {
+        font-size: 2rem;
+    }
+    
+    .concept-card,
+    .practice-card,
+    .results-card {
+        padding: 20px;
+    }
+    
+    .level-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .level-btn {
+        min-width: 250px;
+    }
+    
+    .activity-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .activity-btn {
+        width: 250px;
+    }
+    
+    .multiple-choice,
+    .vowel-team-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .blank-word {
+        font-size: 1.5rem;
+    }
+    
+    #user-input, #correction-input {
+        width: 200px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .spelling-input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .results-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sentence-display {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+    
+    .selected-misspelling {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .correction-area {
+        padding: 20px;
+    }
+    
+    .celebration-message {
+        font-size: 2.2rem;
+        padding: 0 20px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90vw;
+    }
+    
+    .vowel-teams-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .vowel-team-card {
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .sound-title {
+        font-size: 1.1rem;
+    }
+    
+    .progress-dots {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .progress-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .app-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    #user-input, #correction-input {
+        width: 180px;
+    }
+    
+    .celebration-message {
+        font-size: 1.8rem;
+        padding: 0 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 85vw;
+    }
+    
+    .level-btn, .activity-btn {
+        width: 90%;
+        min-width: auto;
+        padding: 12px 20px;
+    }
+    
+    .level-icon {
+        font-size: 1.5rem;
+    }
+    
+    .level-name {
+        font-size: 1rem;
+    }
+    
+    .level-desc {
+        font-size: 0.8rem;
+    }
+    
+    .activity-btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+    
+    .blank-word {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .choice-btn {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    
+    .vowel-option-btn {
+        padding: 15px 10px;
+        font-size: 1.1rem;
+    }
+    
+    .sentence-display {
+        font-size: 1rem;
+        padding: 15px;
+        line-height: 1.5;
+    }
+    
+    .sentence-word {
+        padding: 3px 6px;
+        margin: 1px;
+    }
+    
+    .correction-area {
+        padding: 15px;
+    }
+    
+    .misspelled-word-display {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+    
+    .word-hint, .blank-hint {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .feedback {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    
+    .instruction {
+        font-size: 1.1rem;
+    }
+    
+    .sound-display {
+        font-size: 1.4rem;
+        padding: 15px;
+    }
+    
+    .score-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 1.5rem;
+    }
+    
+    .floating-star, .floating-heart {
+        font-size: 1rem;
+    }
+    
+    .vowel-team-card .team {
+        font-size: 1.2rem;
+    }
+    
+    .vowel-team-card .example {
+        font-size: 0.8rem;
+    }
+    
+    .progress-text {
+        font-size: 0.7rem;
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+    .app-container {
+        padding: 10px;
+    }
+    
+    .concept-card,
+    .practice-card,
+    .results-card {
+        padding: 15px;
+    }
+    
+    .app-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .celebration-message {
+        font-size: 1.5rem;
+        max-width: 90vw;
+    }
+    
+    .blank-word {
+        font-size: 1rem;
+        letter-spacing: 0px;
+    }
+    
+    .sentence-display {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+    
+    .choice-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .vowel-option-btn {
+        padding: 12px 8px;
+        font-size: 1rem;
+    }
+    
+    #user-input, #correction-input {
+        width: 150px;
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    
+    .level-btn, .activity-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .score-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2rem;
+    }
+    
+    .multiple-choice,
+    .vowel-team-options {
+        gap: 10px;
+    }
+    
+    .vowel-teams-row {
+        gap: 10px;
+    }
+    
+    .vowel-team-card {
+        min-width: 100px;
+        padding: 12px 15px;
+    }
+    
+    .progress-dots {
+        gap: 6px;
+    }
+    
+    .progress-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .app-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .app-header {
+        margin-bottom: 15px;
+    }
+    
+    .concept-card,
+    .practice-card,
+    .results-card {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .level-buttons,
+    .activity-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .level-btn, .activity-btn {
+        flex: 1;
+        min-width: 120px;
+        padding: 10px;
+    }
+    
+    .level-icon {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    
+    .celebration-message {
+        font-size: 2rem;
+    }
+    
+    .floating-elements {
+        display: none; /* Hide floating elements in landscape to save space */
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .app-title,
+    .section-title,
+    .level-name,
+    .activity-btn,
+    .vowel-team-card .team {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .choice-btn,
+    .vowel-option-btn,
+    .level-btn {
+        border-width: 1px; /* Reduce border thickness on high DPI */
+    }
+}

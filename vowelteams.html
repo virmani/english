@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vowel Teams Spelling Adventure! 🌟</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/activities.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -54,6 +59,9 @@
                                 </button>
                                 <button id="sound-match-activity" class="activity-btn">
                                     🎵 Sound Match
+                                </button>
+                                <button id="misspelled-activity" class="activity-btn">
+                                    🔍 Find Misspelled Words
                                 </button>
                             </div>
                         </div>
@@ -312,6 +320,46 @@
                 </div>
             </section>
 
+            <!-- Misspelled Words Section -->
+            <section id="misspelled-section" class="section">
+                <div class="practice-card">
+                    <h2 class="section-title">🔍 Find the Misspelled Words</h2>
+                    
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="misspelled-progress-fill"></div>
+                        <span class="progress-text"><span id="misspelled-current-question">1</span> of <span id="misspelled-total-questions">10</span></span>
+                    </div>
+                    
+                    <div class="question-area">
+                        <div class="word-display">
+                            <h3 class="instruction" id="misspelled-instruction">Click on the misspelled words in this sentence:</h3>
+                            <div class="sentence-display" id="sentence-display">
+                                <!-- Sentence with clickable words will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="correction-area" id="correction-area" style="display: none;">
+                            <h4 class="correction-instruction">How should this word be spelled?</h4>
+                            <div class="misspelled-word-display" id="misspelled-word-display"></div>
+                            <input type="text" id="correction-input" placeholder="Type the correct spelling..." autocomplete="off" spellcheck="false">
+                            <button id="submit-correction" class="check-btn">Submit Correction</button>
+                        </div>
+                        
+                        <div class="selected-misspellings" id="selected-misspellings">
+                            <!-- Will show selected misspelled words and their corrections -->
+                        </div>
+                        
+                        <div class="feedback" id="misspelled-feedback"></div>
+                        
+                        <div class="sentence-actions" id="sentence-actions">
+                            <button id="finish-sentence" class="check-btn" style="display: none;">Finish Sentence</button>
+                        </div>
+                    </div>
+                    
+                    <button id="back-to-activities-4" class="back-btn">← Back to Activities</button>
+                </div>
+            </section>
+
             <!-- Results Section -->
             <section id="results-section" class="section">
                 <div class="results-card">
@@ -349,6 +397,13 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Modular JavaScript Files -->
+    <script type="module" src="data/wordDictionary.js"></script>
+    <script type="module" src="js/utils.js"></script>
+    <script type="module" src="js/activities/spellingActivity.js"></script>
+    <script type="module" src="js/activities/fillBlanksActivity.js"></script>
+    <script type="module" src="js/activities/soundMatchActivity.js"></script>
+    <script type="module" src="js/activities/misspelledWordsActivity.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
